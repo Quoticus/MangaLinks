@@ -1,3 +1,4 @@
+var mangaLinkGroupSize = 10;
 var mangaList = `
 http://kissmanga.com/Manga/Re-Monster
 http://kissmanga.com/Manga/Death-March-kara-Hajimaru-Isekai-Kyousoukyoku
