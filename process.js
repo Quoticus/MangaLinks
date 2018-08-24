@@ -1,15 +1,16 @@
 window.onload = function(e) {
 	getTableAndButtons();
 	//document.getElementById("submitForm").addEventListener("click", );
-	
-	buttons[0].addEventListener("click", function() {
-		openWindows();
-	});
+	for(var buttonNum = 0; buttonNum < buttons.length; buttonNum++){
+		buttons[buttonNum].id = buttonNum;
+		buttons[buttonNum].addEventListener("click", function(buttonNum) {
+			openWindows(buttonNum);
+		});
+	}
 }
 
 function getTableAndButtons(){
 	buttons = document.getElementsByTagName("button");
-	console.dir(buttons);
 	var table = document.getElementsByTagName("a");
 	newTable = new Array;
 	for(var i = 0; i < table.length; i++){
@@ -17,14 +18,10 @@ function getTableAndButtons(){
 			newTable.push(table[i]);
 		}
 	}
-	console.dir(table);
-	console.dir(newTable);
 }
 
-function openWindows(x){
-	for(var x = 0; x < 10; x++){
-		console.log(newTable[x].href);
-		//window.open(newTable[x].href, '_blank');
+function openWindows(buttonNum){
+	for(var x = (buttonNum.target.id * 10); x < (buttonNum.target.id * 10) + 10; x++){
 		window.open(newTable[x].href, x);
 	}
 }
