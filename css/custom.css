@@ -70,7 +70,7 @@ table tr:last-child td {
 
 	table tr td:first-child{
 
-		max-width: 500px;
+		max-width: 800px;
 	}
 }
 
@@ -84,6 +84,7 @@ table tr:last-child td {
 
 	table tr td:first-child{
 		padding-left: 10px;
+		padding-right: 10px;
 	}
 
 
@@ -101,7 +102,7 @@ table tr:last-child td {
 
 	table tr td:first-child{
 
-		max-width: 600px;
+		max-width: 900px;
 
 	}
 }

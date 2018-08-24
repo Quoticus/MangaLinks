@@ -1,4 +1,15 @@
-window.onload = function(e) {
+window.onload = function() {
+
+
+
+
+
+
+
+
+
+
+
 	getTableAndButtons();
 	//document.getElementById("submitForm").addEventListener("click", );
 	for(var buttonNum = 0; buttonNum < buttons.length; buttonNum++){
@@ -7,6 +18,10 @@ window.onload = function(e) {
 			openWindows(buttonNum);
 		});
 	}
+}
+
+function buildTable(){
+		//get mangaList length
 }
 
 function getTableAndButtons(){
