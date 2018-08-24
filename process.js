@@ -54,7 +54,6 @@ function buildTable(newMangaList){
 		td = tr.insertCell();
 		table.removeChild(table.getElementsByTagName("tbody")[0]);
 		body.appendChild(table);
-
 }
 
 function getTableAndButtons(){
