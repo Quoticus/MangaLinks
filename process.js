@@ -2,7 +2,6 @@ window.onload = function() {
 	var newMangaList = (mangaList.split("\n")).filter(entity => String(entity).trim());
 	buildTable(newMangaList);
 	getTableAndButtons();
-	//document.getElementById("submitForm").addEventListener("click", );
 	for(var buttonNum = 0; buttonNum < buttons.length; buttonNum++){
 		buttons[buttonNum].id = buttonNum;
 		buttons[buttonNum].addEventListener("click", function(buttonNum) {
@@ -12,7 +11,6 @@ window.onload = function() {
 }
 
 function buildTable(newMangaList){
-		//get mangaList
 		var body = document.body;
 	  var table = document.createElement("table");
 	  table.setAttribute("id", "MangaList");
@@ -37,7 +35,6 @@ function buildTable(newMangaList){
 					button.type = "button";
 					button.innerHTML = "Open Block Links";
 					td.appendChild(button);
-					//table.insertRow().insertCell().setAttribute("class", "spacer");
 					tr = table.insertRow();
 				}
 			}
@@ -55,7 +52,6 @@ function buildTable(newMangaList){
 		}
 		tr = table.insertRow();
 		td = tr.insertCell();
-		console.log(table);
 		table.removeChild(table.getElementsByTagName("tbody")[0]);
 		body.appendChild(table);
 
@@ -66,9 +62,7 @@ function getTableAndButtons(){
 	var table = document.getElementsByTagName("a");
 	newTable = new Array;
 	for(var i = 0; i < table.length; i++){
-		if(table[i].host == "kissmanga.com"){
-			newTable.push(table[i]);
-		}
+		(table[i].host == "kissmanga.com")?newTable.push(table[i]):[];
 	}
 }
 
